@@ -1,9 +1,9 @@
-# docker-spark-cluster
+# docker-hadoop-cluster
 Build your own Hadoop cluster setup in Docker.      
 A multinode Hadoop installation where each node of the network runs in its own separated Docker container.   
 The installation takes care of the Hadoop configuration, providing:
 1) a debian image with java (javabase image)
-2) three fully configured Spark nodes running on Hadoop (hadoopbase image):
+2) three fully configured Hadoop nodes running on Hadoop (hadoopbase image):
     * nodemaster (master node)
     * node2      (slave)
     * node3      (slave)
@@ -15,7 +15,7 @@ The installation takes care of the Hadoop configuration, providing:
 4) cd ../hadoop
 5) ./build.sh    # This builds sparkbase image
 6) run ./cluster.sh deploy
-7) The script will finish displaying the Hadoop and Spark admin URLs:
+7) The script will finish displaying the Hadoop and admin URLs:
     * Hadoop info @ nodemaster: http://172.18.1.1:8088/cluster
     * DFS Health @ nodemaster : http://172.18.1.1:9870/dfshealth.html
 
